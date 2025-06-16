@@ -1,0 +1,12 @@
+:root {
+  --primary: #5f27cd; /* violet */
+  --secondary: #00cec9; /* teal */
+  --dark: #2d3436;
+  --light: #f1f2f6;
+  --accent: #ffeaa7; /* yellow accent */
+  --danger: #d63031;
+}
+
+body {
+  background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+}
