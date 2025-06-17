@@ -27,13 +27,48 @@ const CapsuleForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-light p-4 rounded shadow-sm">
-      <h4 className="mb-3 text-primary">Create a Time Capsule</h4>
-      <Input label="Title" name="title" value={formData.title} onChange={handleChange} />
-      <TextArea label="Message" name="message" value={formData.message} onChange={handleChange} />
-      <DatePicker label="Unlock Date" name="unlockDate" value={formData.unlockDate} onChange={handleChange} />
-      <FileUploader onFileSelect={handleFile} />
-      <Button type="submit" className="mt-3">Save Capsule</Button>
+    <form
+      onSubmit={handleSubmit}
+      className="bg-white p-5 rounded-4 shadow-sm border border-light-subtle"
+    >
+      <h4 className="mb-4 fw-bold text-dark text-center">Create Your Time Capsule</h4>
+
+      <div className="mb-3">
+        <Input
+          label="Title"
+          name="title"
+          value={formData.title}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="mb-3">
+        <TextArea
+          label="Message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="mb-3">
+        <DatePicker
+          label="Unlock Date"
+          name="unlockDate"
+          value={formData.unlockDate}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="mb-4">
+        <FileUploader onFileSelect={handleFile} />
+      </div>
+
+      <div className="text-end">
+        <Button type="submit" className="btn-capsule-open text-black">
+          Save Capsule
+        </Button>
+      </div>
     </form>
   );
 };

@@ -1,0 +1,12 @@
+:root {
+  --primary: #4f46e5;    /* Indigo */
+  --secondary: #06b6d4;  /* Cyan */
+  --dark: #1e293b;       /* Slate-800 */
+  --light: #f8fafc;      /* Slate-50 */
+  --accent: #facc15;     /* Yellow-400 */
+  --danger: #ef4444;     /* Red-500 */
+}
+
+body {
+  background: linear-gradient(to right, #f1f5f9, #e0f2fe); /* light slate to light blue */
+}

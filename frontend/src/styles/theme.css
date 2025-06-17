@@ -1,12 +1,153 @@
 :root {
-  --primary: #5f27cd; /* violet */
-  --secondary: #00cec9; /* teal */
-  --dark: #2d3436;
-  --light: #f1f2f6;
-  --accent: #ffeaa7; /* yellow accent */
-  --danger: #d63031;
+  --primary: #6366f1;     /* Soft Indigo */
+  --secondary: #14b8a6;   /* Teal Green */
+  --dark: #0f172a;        /* Deep Navy (Slate-900) */
+  --light: #f1f5f9;       /* Light Gray (Slate-100) */
+  --accent: #fbbf24;      /* Amber-400 */
+  --danger: #e11d48;      /* Rose-600 */
+  --success: #22c55e;     /* Emerald-500 */
+  --info: #3b82f6;        /* Blue-500 */
+  --muted: #94a3b8;       /* Slate-400 */
 }
 
+
 body {
-  background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+  background: linear-gradient(to right, #f1f5f9, #e0f2fe); /* Elegant light gradient */
+  color: var(--dark);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body, .btn, .navbar, .form-control, .card, .dropdown, .alert {
+  font-family: 'Inter', sans-serif !important;
+}
+
+
+.custom-footer {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.custom-navbar {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: var(--light);
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .navbar-brand:hover {
+  color: var(--accent);
+}
+
+
+/* Capsule card styles */
+.capsule-card {
+  transition: transform 0.25s ease;
+}
+.capsule-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Countdown badge */
+.countdown-badge {
+  background-color: var(--light);
+  color: var(--primary);
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 1rem;
+}
+
+.btn-capsule-open {
+  background: linear-gradient(145deg, #f1f5ff, #dfe9ff); /* soft bluish gradient */
+  color: var(--primary);
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 12px;
+  border: 2px solid var(--primary);
+  box-shadow: 0 6px 12px rgba(79, 70, 229, 0.1), 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle glossy highlight */
+.btn-capsule-open::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease-in-out;
+}
+
+.btn-capsule-open:hover::before {
+  left: 130%;
+}
+
+.btn-capsule-open:hover {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-capsule-open:active {
+  transform: scale(0.98);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+
+
+
+form {
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.custom-footer {
+  background-color: var(--dark);
+  color: white;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+

@@ -4,12 +4,16 @@ import FilterBar from '../components/dashboard/FilterBar';
 import CapsuleList from '../components/dashboard/CapsuleList';
 import CapsuleViewer from '../components/capsules/CapsuleViewer';
 import useCapsules from '../hooks/useCapsules'; // <-- ✅ use capsule context
+import Button from '../components/ui/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
   const { capsules } = useCapsules(); // ✅ get capsules from context
   const [searchQuery, setSearchQuery] = useState('');
   const [filter, setFilter] = useState({ status: 'all', startDate: '', endDate: '' });
   const [selectedCapsule, setSelectedCapsule] = useState(null);
+
+  const navigate = useNavigate();
 
   if (!capsules) return <div className="container py-5">Loading capsules...</div>;
 
@@ -35,7 +39,11 @@ const Dashboard = () => {
 
   return (
     <div className="container py-5">
-      <h2 className="mb-4">Your Time Capsules</h2>
+      <div className="d-flex justify-content-between align-items-center mb-4">
+        <h2 className="mb-0">Your Time Capsules</h2>
+        <Button onClick={() => navigate('/create')} className="mt-0">New Capsule</Button>
+      </div>
+
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <FilterBar filter={filter} setFilter={setFilter} />
       <CapsuleList capsules={filteredCapsules} onOpen={setSelectedCapsule} />

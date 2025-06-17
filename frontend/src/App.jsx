@@ -9,6 +9,8 @@ import Settings from './routes/Settings';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import AuthGuard from './components/layout/AuthGuard';
+import './styles/theme.css';
+
 
 function App() {
   return (
